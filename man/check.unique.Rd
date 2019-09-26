@@ -10,7 +10,7 @@ check.unique(x, cols, silent = FALSE)
 \item{x}{Data frame representing a table of a data base.}
 
 \item{cols}{Names of the colum(s) of \code{x} to which the constraint
-applies (vector of type character).}
+applies (vector of type character). See notes.}
 
 \item{silent}{Logical. If \code{FALSE}, details on constraint
 violations are shown using \code{\link[base]{print}}.}
@@ -23,7 +23,9 @@ violations are shown using \code{\link[base]{print}}.}
 Check for violation of a unique constraint
 }
 \note{
-See examples.
+If \code{cols} has length > 1, uniqueness is checked for the
+  combination of columns rather than for each column individually. See
+  the examples.
 }
 \examples{
 

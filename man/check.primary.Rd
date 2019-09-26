@@ -23,9 +23,11 @@ violations are shown using \code{\link[base]{print}}.}
 Check for violation of a primary key constraint
 }
 \note{
-The function performs a combined check for duplicates (using 
+The function performs a check for duplicates (using 
   \code{\link{check.unique}}) and missing values
-  (using \code{\link{check.notnull}}). See examples.
+  (using \code{\link{check.notnull}}). If \code{cols} has length > 1,
+  this is interpreted as a composite primary key (and not as a set of
+  individual key columns). See the examples.
 }
 \examples{
 

@@ -11,9 +11,11 @@
 #' @return \code{TRUE} if the check was passed successfully and
 #'   \code{FALSE} otherwise.
 #'
-#' @note The function performs a combined check for duplicates (using 
+#' @note The function performs a check for duplicates (using 
 #'   \code{\link{check.unique}}) and missing values
-#'   (using \code{\link{check.notnull}}). See examples.
+#'   (using \code{\link{check.notnull}}). If \code{cols} has length > 1,
+#'   this is interpreted as a composite primary key (and not as a set of
+#'   individual key columns). See the examples.
 #'
 #' @seealso \code{\link{check.notnull}}, \code{\link{check.unique}},
 #'   \code{\link{check.foreign}}

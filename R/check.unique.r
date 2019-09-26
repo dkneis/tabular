@@ -4,14 +4,16 @@
 #'
 #' @param x Data frame representing a table of a data base.
 #' @param cols Names of the colum(s) of \code{x} to which the constraint
-#'   applies (vector of type character).
+#'   applies (vector of type character). See notes.
 #' @param silent Logical. If \code{FALSE}, details on constraint
 #'  violations are shown using \code{\link[base]{print}}.
 #' 
 #' @return \code{TRUE} if the check was passed successfully and
 #'   \code{FALSE} otherwise.
 #'
-#' @note See examples.
+#' @note If \code{cols} has length > 1, uniqueness is checked for the
+#'   combination of columns rather than for each column individually. See
+#'   the examples. 
 #'
 #' @seealso \code{\link{check.notnull}}, \code{\link{check.primary}},
 #'   \code{\link{check.foreign}}

@@ -3,8 +3,8 @@
 #' Check for violation of a not-null constraint
 #'
 #' @param x Data frame representing a table of a data base.
-#' @param cols Names of the colum(s) of \code{x} to which the constraint
-#'   applies (vector of type character).
+#' @param cols Names of the colum(s) of \code{x} which are to be scanned for
+#'   missing values (vector of type character).
 #' @param silent Logical. If \code{FALSE}, details on constraint
 #'  violations are shown using \code{\link[base]{print}}.
 #' 

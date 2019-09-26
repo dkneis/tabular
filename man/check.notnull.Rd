@@ -9,8 +9,8 @@ check.notnull(x, cols, silent = FALSE)
 \arguments{
 \item{x}{Data frame representing a table of a data base.}
 
-\item{cols}{Names of the colum(s) of \code{x} to which the constraint
-applies (vector of type character).}
+\item{cols}{Names of the colum(s) of \code{x} which are to be scanned for
+missing values (vector of type character).}
 
 \item{silent}{Logical. If \code{FALSE}, details on constraint
 violations are shown using \code{\link[base]{print}}.}
