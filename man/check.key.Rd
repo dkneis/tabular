@@ -2,7 +2,7 @@
 % Please edit documentation in R/check.key.r
 \name{check.key}
 \alias{check.key}
-\title{Check key (primary) constraints}
+\title{Check (primary) key constraints}
 \usage{
 check.key(x, cols, silent = FALSE)
 }
@@ -20,7 +20,7 @@ violations are shown using \code{\link[base]{print}}.}
   \code{FALSE} otherwise.
 }
 \description{
-Check for violation of a (primary) key constraint.
+Check for violation of a (primary) key constraint
 }
 \note{
 The function performs a check for duplicates (using 
@@ -46,8 +46,10 @@ temperature[2, "day"] <- NA
 check.key(temperature, c("day", "city"))
 }
 \seealso{
-\code{\link{check.notnull}}, \code{\link{check.unique}},
-  \code{\link{check.link}}
+There are more functions to check constraints, namely
+  \code{\link{check.notnull}}, \code{\link{check.unique}},
+  and \code{\link{check.link}}.
+  See also the example for \code{\link{db.read}}.
 }
 \author{
 David Kneis \email{david.kneis@tu-dresden.de}

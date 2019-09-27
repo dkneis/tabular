@@ -16,8 +16,10 @@
 #'   missing values are marked as \code{NA} (instead of \code{NULL} like in
 #'   a true SQL data base).
 #'
-#' @seealso \code{\link{check.unique}}, \code{\link{check.key}},
-#'   \code{\link{check.link}},
+#' @seealso There are more functions to check constraints, namely
+#'   \code{\link{check.unique}}, \code{\link{check.key}},
+#'   and \code{\link{check.link}}.
+#'   See also the example for \code{\link{db.read}}.
 #'   
 #' @author David Kneis \email{david.kneis@@tu-dresden.de}
 #'

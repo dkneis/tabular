@@ -41,8 +41,10 @@ print(temperature)
 check.unique(temperature, c("day", "city"))
 }
 \seealso{
-\code{\link{check.notnull}}, \code{\link{check.key}},
-  \code{\link{check.link}}
+There are more functions to check constraints, namely
+  \code{\link{check.notnull}}, \code{\link{check.key}},
+  and \code{\link{check.link}}.
+  See also the example for \code{\link{db.read}}.
 }
 \author{
 David Kneis \email{david.kneis@tu-dresden.de}

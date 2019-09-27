@@ -20,8 +20,10 @@
 #'   relation (\url{https://en.wikipedia.org/wiki/One-to-many_(data_model)})
 #'   can successfully be joined on the specified columns.
 #'
-#' @seealso \code{\link{check.notnull}}, \code{\link{check.unique}},
-#'   \code{\link{check.key}}
+#' @seealso There are more functions to check constraints, namely
+#'   \code{\link{check.notnull}}, \code{\link{check.unique}},
+#'   and \code{\link{check.key}}.
+#'   See also the example for \code{\link{db.read}}.
 #'
 #' @author David Kneis \email{david.kneis@@tu-dresden.de}
 #'

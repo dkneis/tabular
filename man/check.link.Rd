@@ -51,8 +51,10 @@ countries2 <- rbind(countries, data.frame(id=3, country="India"))
 check.link(people, "id_country", countries2, "id")
 }
 \seealso{
-\code{\link{check.notnull}}, \code{\link{check.unique}},
-  \code{\link{check.key}}
+There are more functions to check constraints, namely
+  \code{\link{check.notnull}}, \code{\link{check.unique}},
+  and \code{\link{check.key}}.
+  See also the example for \code{\link{db.read}}.
 }
 \author{
 David Kneis \email{david.kneis@tu-dresden.de}

@@ -1,6 +1,6 @@
-#' Check key (primary) constraints
+#' Check (primary) key constraints
 #'
-#' Check for violation of a (primary) key constraint.
+#' Check for violation of a (primary) key constraint
 #'
 #' @param x Data frame representing a table of a data base.
 #' @param cols Names of the colum(s) of \code{x} to which the constraint
@@ -17,9 +17,10 @@
 #'   this is interpreted as a composite key (and not as a set of
 #'   individual key columns). See the examples.
 #'
-#' @seealso \code{\link{check.notnull}}, \code{\link{check.unique}},
-#'   \code{\link{check.link}}
-#'
+#' @seealso There are more functions to check constraints, namely
+#'   \code{\link{check.notnull}}, \code{\link{check.unique}},
+#'   and \code{\link{check.link}}.
+#'   See also the example for \code{\link{db.read}}.
 #'
 #' @author David Kneis \email{david.kneis@@tu-dresden.de}
 #'
