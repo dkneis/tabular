@@ -41,8 +41,8 @@ print(temperature)
 check.unique(temperature, c("day", "city"))
 }
 \seealso{
-\code{\link{check.notnull}}, \code{\link{check.primary}},
-  \code{\link{check.foreign}}
+\code{\link{check.notnull}}, \code{\link{check.key}},
+  \code{\link{check.link}}
 }
 \author{
 David Kneis \email{david.kneis@tu-dresden.de}

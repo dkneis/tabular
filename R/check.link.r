@@ -21,7 +21,7 @@
 #'   can successfully be joined on the specified columns.
 #'
 #' @seealso \code{\link{check.notnull}}, \code{\link{check.unique}},
-#'   \code{\link{check.primary}}
+#'   \code{\link{check.key}}
 #'
 #' @author David Kneis \email{david.kneis@@tu-dresden.de}
 #'
@@ -34,16 +34,16 @@
 #' print(countries)
 #'
 #' # Should succeed
-#' check.foreign(people, "id_country", countries, "id")
+#' check.link(people, "id_country", countries, "id")
 #' 
 #' # Example of an orphaned child record
-#' check.foreign(people, "id_country", countries[1:2,], "id")
+#' check.link(people, "id_country", countries[1:2,], "id")
 #' 
 #' # Example of ambiguity
 #' countries2 <- rbind(countries, data.frame(id=3, country="India"))
-#' check.foreign(people, "id_country", countries2, "id")
+#' check.link(people, "id_country", countries2, "id")
 
-check.foreign <- function(child.tbl, child.col, parent.tbl, parent.col, silent=FALSE) {
+check.link <- function(child.tbl, child.col, parent.tbl, parent.col, silent=FALSE) {
 
   # check child table  
   if (!is.data.frame(child.tbl))

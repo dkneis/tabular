@@ -13,10 +13,10 @@
 #'
 #' @note If \code{cols} has length > 1, uniqueness is checked for the
 #'   combination of columns rather than for each column individually. See
-#'   the examples. 
+#'   the examples.
 #'
-#' @seealso \code{\link{check.notnull}}, \code{\link{check.primary}},
-#'   \code{\link{check.foreign}}
+#' @seealso \code{\link{check.notnull}}, \code{\link{check.key}},
+#'   \code{\link{check.link}}
 #'
 #' @author David Kneis \email{david.kneis@@tu-dresden.de}
 #'

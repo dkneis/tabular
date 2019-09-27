@@ -16,8 +16,8 @@
 #'   missing values are marked as \code{NA} (instead of \code{NULL} like in
 #'   a true SQL data base).
 #'
-#' @seealso \code{\link{check.unique}}, \code{\link{check.primary}},
-#'   \code{\link{check.foreign}},
+#' @seealso \code{\link{check.unique}}, \code{\link{check.key}},
+#'   \code{\link{check.link}},
 #'   
 #' @author David Kneis \email{david.kneis@@tu-dresden.de}
 #'
