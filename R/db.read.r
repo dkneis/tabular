@@ -19,7 +19,8 @@
 #' @note The text files are read with \code{\link[base]{read.table}} using the
 #'   fixed arguments \code{header=TRUE} and \code{stringsAsFactors=FALSE}. Thus,
 #'   one should not try to overwrite these settings using the \code{...}
-#'   argument.
+#'   argument. It is possible to set other optional arguments of \code{read.table} 
+#'   like \code{skip} or \code{encoding}.
 #'
 #' @seealso After reading the set of files, one typically wants to check the
 #'   data base for integrity using the functions \code{\link{check.notnull}},
@@ -50,7 +51,7 @@
 #' 
 #' validate(db)
 
-db.read <- function(dir=".", ext="tsv", sep="\t") {
+db.read <- function(dir=".", ext="tsv", sep="\t", ...) {
   if (!dir.exists(dir))
     stop(paste0("directory '",dir,"' is inaccessible"))
   tables <- list.files(path=dir, pattern=paste0("[.]",ext,"$"), full.names=TRUE)
@@ -61,7 +62,7 @@ db.read <- function(dir=".", ext="tsv", sep="\t") {
     tblName <- gsub(basename(tbl), pattern=paste0("(.+)[.]",ext,"$"),
       replacement="\\1")
     db[[tblName]] <- read.table(file=tbl, header=TRUE, sep=sep,
-      stringsAsFactors=FALSE)
+      stringsAsFactors=FALSE, ...)
   }
   db
 }
