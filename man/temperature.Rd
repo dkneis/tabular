@@ -4,7 +4,9 @@
 \name{temperature}
 \alias{temperature}
 \title{Temperature}
-\format{This is a sample data frame to demonstate table constraints.}
+\format{
+This is a sample data frame to demonstate table constraints.
+}
 \description{
 A set of temperature data observed at different times and locations.
 }

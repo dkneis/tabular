@@ -1,8 +1,8 @@
 Package: tabular
 Type: Package
 Title: Manage data-base-like collections of text files
-Version: 0.1
-Date: 2019-09-14
+Version: 0.2
+Date: 2023-01-26
 Author: David Kneis <david.kneis@tu-dresden.de>
 Maintainer: David Kneis <david.kneis@tu-dresden.de>
 Description: Utility functions to manage data-base-like collections of
@@ -10,4 +10,5 @@ Description: Utility functions to manage data-base-like collections of
   for violations of primary and foreign key constrains that would
   normally be carried out by an SQL-based DBMS.
 License: GPL (>= 2)
-RoxygenNote: 6.0.1
+RoxygenNote: 7.1.2
+Encoding: UTF-8

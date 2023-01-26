@@ -4,7 +4,7 @@
 \alias{db.read}
 \title{Read a set of text files forming a data base}
 \usage{
-db.read(dir = ".", ext = "tsv", sep = "\\t")
+db.read(dir = ".", ext = "tsv", sep = "\\t", ...)
 }
 \arguments{
 \item{dir}{Directory containing the text files (character string). Will be
@@ -12,13 +12,13 @@ passed to argument \code{path} of \code{\link[base]{list.files}}.}
 
 \item{ext}{A character string representing a file extension used to
 identify the files to be read. This is typically a string of three
-characters like, e.g., 'csv' or 'tsv'. A preceeding dot is implicitly
+characters like, e.g., 'csv' or 'tsv'. A preceding dot is implicitly
 assumed to be present and must be omitted.}
 
 \item{sep}{The field delimiter (character) for use with 
-\code{\link[base]{read.table}}.}
+\code{\link[utils]{read.table}}.}
 
-\item{...}{Further optional arguments passed to \code{\link[base]{read.table}}.}
+\item{...}{Further optional arguments passed to \code{\link[utils]{read.table}}.}
 }
 \value{
 A list, each element of which is a data frame. Element names are
@@ -29,10 +29,11 @@ A list, each element of which is a data frame. Element names are
 Reads a set of delimited text files supposed to form a relational data base
 }
 \note{
-The text files are read with \code{\link[base]{read.table}} using the
+The text files are read with \code{\link[utils]{read.table}} using the
   fixed arguments \code{header=TRUE} and \code{stringsAsFactors=FALSE}. Thus,
   one should not try to overwrite these settings using the \code{...}
-  argument.
+  argument. It is possible to set other optional arguments of \code{read.table} 
+  like \code{skip} or \code{encoding}.
 }
 \examples{
 

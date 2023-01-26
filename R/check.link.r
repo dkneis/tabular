@@ -10,6 +10,8 @@
 #'   'one-to-many' relation. See notes.
 #' @param parent.col Name of a column from \code{parent.tbl} providing the link
 #'   to the other table (character string).
+#' @param na.ok Logical. Allow \code{NA} values in the child column without
+#'   the respective complement in the parent column?
 #' @param silent Logical. If \code{FALSE}, details on constraint
 #'  violations are shown using \code{\link[base]{print}}.
 #' 
@@ -45,7 +47,7 @@
 #' countries2 <- rbind(countries, data.frame(id=3, country="India"))
 #' check.link(people, "id_country", countries2, "id")
 
-check.link <- function(child.tbl, child.col, parent.tbl, parent.col, silent=FALSE) {
+check.link <- function(child.tbl, child.col, parent.tbl, parent.col, na.ok=FALSE, silent=FALSE) {
 
   # check child table  
   if (!is.data.frame(child.tbl))
@@ -64,7 +66,21 @@ check.link <- function(child.tbl, child.col, parent.tbl, parent.col, silent=FALS
 
   # get field values
   childValues <- child.tbl[,child.col]
+  if (any(is.na(childValues))) {
+    if (!na.ok) {
+      stop("found NAs in 'child.col'")
+    } else {
+      childValues <- childValues[!is.na(childValues)]
+    }
+  }
+  if (length(childValues) < 1) {
+    stop("'child.col' does not contain usable values")
+  }
+
   parentValues <- parent.tbl[,parent.col]
+  if (length(parentValues) < 1) {
+    stop("'parent.col' does not contain usable values")
+  }
 
   # check identity of types
   if (!identical(typeof(childValues), typeof(parentValues))) {

@@ -4,7 +4,9 @@
 \name{countries}
 \alias{countries}
 \title{Countries}
-\format{This is a sample data frame to demonstate table constraints.}
+\format{
+This is a sample data frame to demonstate table constraints.
+}
 \description{
 A set of countries.
 }

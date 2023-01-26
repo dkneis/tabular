@@ -4,7 +4,14 @@
 \alias{check.link}
 \title{Check foreign key constraints}
 \usage{
-check.link(child.tbl, child.col, parent.tbl, parent.col, silent = FALSE)
+check.link(
+  child.tbl,
+  child.col,
+  parent.tbl,
+  parent.col,
+  na.ok = FALSE,
+  silent = FALSE
+)
 }
 \arguments{
 \item{child.tbl}{Data frame representing the table on the 'many' side of an
@@ -18,6 +25,9 @@ to the other table (character string).}
 
 \item{parent.col}{Name of a column from \code{parent.tbl} providing the link
 to the other table (character string).}
+
+\item{na.ok}{Logical. Allow \code{NA} values in the child column without
+the respective complement in the parent column?}
 
 \item{silent}{Logical. If \code{FALSE}, details on constraint
 violations are shown using \code{\link[base]{print}}.}

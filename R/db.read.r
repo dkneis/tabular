@@ -6,17 +6,17 @@
 #'   passed to argument \code{path} of \code{\link[base]{list.files}}.
 #' @param ext A character string representing a file extension used to
 #'   identify the files to be read. This is typically a string of three
-#'   characters like, e.g., 'csv' or 'tsv'. A preceeding dot is implicitly
+#'   characters like, e.g., 'csv' or 'tsv'. A preceding dot is implicitly
 #'   assumed to be present and must be omitted.
 #' @param sep The field delimiter (character) for use with 
-#'   \code{\link[base]{read.table}}.
-#' @param ... Further optional arguments passed to \code{\link[base]{read.table}}.
+#'   \code{\link[utils]{read.table}}.
+#' @param ... Further optional arguments passed to \code{\link[utils]{read.table}}.
 #' 
 #' @return A list, each element of which is a data frame. Element names are
 #'   constructed from the source file names by stripping the specified extension
 #'   and the preceeding dot.
 #'
-#' @note The text files are read with \code{\link[base]{read.table}} using the
+#' @note The text files are read with \code{\link[utils]{read.table}} using the
 #'   fixed arguments \code{header=TRUE} and \code{stringsAsFactors=FALSE}. Thus,
 #'   one should not try to overwrite these settings using the \code{...}
 #'   argument. It is possible to set other optional arguments of \code{read.table} 
@@ -61,7 +61,7 @@ db.read <- function(dir=".", ext="tsv", sep="\t", ...) {
   for (tbl in tables) {
     tblName <- gsub(basename(tbl), pattern=paste0("(.+)[.]",ext,"$"),
       replacement="\\1")
-    db[[tblName]] <- read.table(file=tbl, header=TRUE, sep=sep,
+    db[[tblName]] <- utils::read.table(file=tbl, header=TRUE, sep=sep,
       stringsAsFactors=FALSE, ...)
   }
   db
